@@ -1,5 +1,12 @@
 <?php
 
+include_once("model/nb_aleatoires_no_double.model.php");
+
+	$tab = nbAleatoires(100,10);
+	echo "<pre>";
+	print_r($tab);
+	echo "</pre>";
+
 	try{
 		$bdd = new PDO('mysql:host=localhost;dbname=league_of_quizz;charset=utf8', 'root', '2070298');
 	} catch (Exception $e){
