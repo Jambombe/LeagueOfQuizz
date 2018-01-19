@@ -2,20 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<!-- <META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=utf-8" -->
 
 	<link rel="stylesheet" href="../assets/css/style.css" media="all">
 	<link rel="shortcut icon" type="image/x-icon" href="#" />
-	<!-- <script type="text/javascript" src="../assets/js/questions.js"></script> -->
 
 	<title>League Of Quizz</title>
 </head>
 <body>
 
 	<div id="wrapper">
-		<h1>League Of Quizz</h1>
-
 		
+		<h1>League Of Quizz</h1>
+			
 		<?php
+
 
 			require_once("../model/questions.class.php");
 
@@ -24,38 +25,26 @@
 
 			$DATA['questions'] = new questions($DATA['difficulty']);
 
-			$DATA['penalites'] = 0;
-
-			require_once("../assets/js/questions.php");
-
 		?>
 
-		<div class="center">
+		<div class="fixed-top">
 
-			<script type="text/javascript" src="../assets/js/chrono.js"></script>
+			<div class="center">
 
-			<div id="chrono"></div> <!-- Chronomètre affiché ici -->
+				<script type="text/javascript" src="../assets/js/chrono.js"></script>
 
-			<button onclick="afficherQuestion()">OUI</button>
+				<div id="chrono"></div> <!-- Chronomètre affiché ici -->
 
-			<div id="test"></div>
-
+			</div>
 		</div>
 
 		<?php
 
 			$DATA['numQuestion'] = 1;
-			$DATA['numNextQuestion'] = 1;
 
 			include_once("../view/afficher_question.view.php");
 
-			// while ($DATA['numQuestion'] <=10 ){
-			// 	if ($DATA['numQuestion'] == $DATA['numNextQuestion']){
-			// 		include_once("../view/afficher_question.view.php");
-			// 	} else {
-			// 		$DATA['numQuestion']++;
-			// 	}
-			// }
+			// mysql_close();
 
 		?>
 

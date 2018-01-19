@@ -42,7 +42,7 @@
 			$nbTotalQuestions = $res->fetchAll();
 			$nbTotalQuestions = intval($nbTotalQuestions[0][0]);
 
-			$nbAleatoires = nbAleatoires($nbTotalQuestions , 2);
+			$nbAleatoires = nbAleatoires($nbTotalQuestions , 10);
 
 			$tab = array();
 			$nb = 1;

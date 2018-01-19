@@ -26,6 +26,7 @@ function chrono(){
 		msec = "0" +msec
 	}
 	document.getElementById("chrono").textContent = min + ":" + sec + ":" + msec
+	document.getElementById("time").value = document.getElementById("chrono").innerHTML;
 	timerID = setTimeout("chrono()", 10)
 }
 
@@ -57,8 +58,8 @@ function chronoContinue(){
 // }
 
 function chronoStop(){
-	document.chronoForm.startstop.value = "start!"
-	document.chronoForm.startstop.onclick = chronoContinue
-	document.chronoForm.reset.onclick = chronoStopReset
+	// document.chronoForm.startstop.value = "start!"
+	// document.chronoForm.startstop.onclick = chronoContinue
+	// document.chronoForm.reset.onclick = chronoStopReset
 	clearTimeout(timerID)
 }
