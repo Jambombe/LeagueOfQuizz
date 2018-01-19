@@ -1,0 +1,179 @@
+html{
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-color: white;
+	width: 960px;
+	margin: auto;
+	margin-bottom: 100px;
+}
+
+/* Titres */
+
+h1{
+	text-align: center;
+}
+
+/* Bannière 
+
+#banner{
+	height: 150px;
+	width: 960px;
+	margin-top: 80px;
+}
+
+/* Menu navifation 
+nav{
+	position: fixed;
+	top: 0px;
+	margin: auto;
+	background-color: white;
+	box-shadow: 0px 0px 10px black;
+	width: 960px;
+	z-index: 1;
+}
+nav ul{
+	margin-top: 20px;
+}
+nav li{
+	display: inline-block;
+	vertical-align: top;
+}
+nav li a{
+	margin-top: 150px;
+	font-family: "Noël";
+}
+nav li a:link{
+	text-decoration: none;
+	font-size: 25px;
+	padding: 15px;
+	color: #1560BD;
+}
+nav li a:visited{
+	color: #1560BD;
+}
+nav li a:hover{
+	color: black;
+}*/
+
+/* DIV */
+
+div.center{
+	margin: auto;
+	text-align: center;
+}
+
+/* Liens */
+
+a:link{
+	text-decoration: none;
+	margin: 5px;
+	color: #1B15BE;
+}
+
+a:visited{
+	color: #1B15BE;
+}
+
+a:hover{
+	color: #4B5DBE;
+}
+
+/* Label */
+
+input[type=text]{
+	width: 75%;
+	height: 30px;
+	padding-left: 5px;
+}
+
+div.start form textarea{
+	resize: none;
+	font-family: 'roboto';
+    padding: 12px 3px;
+    margin-top: 20px;
+    display: block;
+    border-radius: 3px;
+    border: solid 1px #585858;
+    color: #686868;
+    width: 192px;
+    vertical-align: middle;
+    font-size: 1em;
+    display: inline-block;
+    margin: auto;
+    height: 21px;
+}
+
+input[type=submit]{
+	margin-left: 0px;
+	border: none;
+	color: white;
+	font-weight: bold;
+	margin: auto;
+
+	text-decoration: none;
+    width: 200px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    transition: all .2s;
+    color: #fff;
+    font-family: 'roboto';
+    font-weight: 400;
+    background-color: #217db4;
+    padding: 20px 0;
+    border-radius: 3px;
+    border: none;
+    font-size: 22px;
+}
+
+input[type=submit]:hover{
+	box-shadow: 0px 0px 5px black;
+}
+
+div.start form input[type=radio]{
+	display: none;
+}
+
+div.start form label.difficulty{
+	border: solid 30px #585858;
+    border-radius: 3px;
+    border: none;
+    background-color: #585858;
+    transition: all .1s;
+    color: white;
+    padding: 12px 0;
+    width: 75px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.start input[type=radio]:checked+label{
+	background-color: #787878;
+}
+
+/* Nouvelles / mosaïque */
+
+section.articles article {
+	width: 232px;
+	height: 232px;
+	display: inline-block;
+   	border: 1px solid #000;
+   	position: relative;
+	vertical-align: top;
+	margin: 0px;
+	padding: 3px;
+}
+
+section.articles a {
+	margin: 0px;
+}
+
+section.articles img {
+	width: 232px;
+	position: absolute;
+	bottom: 5px;
+	/*border: 1px black solid;*/
+	box-shadow: 0px 0px 5px black;
+}

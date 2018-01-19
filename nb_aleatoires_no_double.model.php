@@ -3,7 +3,6 @@
 	/**
 	* Génère $nbTirages tirages aléatoires, comprit entre 1 et $max
 	*
-	* @pre $max > $nbTirages
 	* @return un tableau avec les $nbTirages tirages aléatoires
 	*/
 	 function nbAleatoires($max, $nbTirages){
@@ -17,7 +16,7 @@
 		    
 		    // Si le nombre n'est pas présent, on l'ajoute au tableau
 		    if (! in_array($nb, $tableau)) {
-		        $tableau[$nb] = $nb;       
+		        $tableau[] = $nb;       
 		            $i++;
 		    }
 		}
