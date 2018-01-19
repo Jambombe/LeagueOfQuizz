@@ -5,21 +5,24 @@
 
 	class question{
 
+		private $id;
 		private $_ennonce;
 		private $_urlImage;
 		private $_reponses; // Array contenant toutes les reponses proposées pour la question
 
 
-		function __construct($ennonce, $urlImage, $id){ // $id sert à charger les reponses de la question n° $id
+		function __construct($id, $ennonce, $urlImage){ // $id sert à charger les reponses de la question n° $id
+			$this->id = $id;
 			$this->_ennonce = $ennonce;
 			$this->_urlImage = $urlImage;
 
 			$this->_reponses = $this->loadReponses($id);
 		}
 
-		function ennonce() { return $this->ennonce; }
-		function urlImage() { return $this->urlImage; }
-		function reponses() { return $this->reponses; }
+		function id() { return $this->id; }
+		function ennonce() { return $this->_ennonce; }
+		function urlImage() { return $this->_urlImage; }
+		function reponses() { return $this->_reponses; }
 
 
 		// Charge les reponses depuis la bd selon l'$id de la question

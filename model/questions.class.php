@@ -1,7 +1,7 @@
 <?php
 
 	require_once("question.class.php");
-	require_once("nb_aleatoires_no_double.model.php");
+	require_once("nb_aleatoires_no_double.class.php");
 
 	class questions{
 
@@ -69,7 +69,7 @@
 				$res = $db->query($cmd);
 				$question = $res->fetchAll();
 
-				$tab[$nb] = new question($question[0][1], $question[0][2], $question[0][0]);
+				$tab[$nb] = new question($question[0][0], $question[0][1], $question[0][2]);
 				$nb++;
 
 			}
