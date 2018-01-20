@@ -1,3 +1,14 @@
+<?php
+
+	// session_start();
+	$_SESSION['difficulty'] = $_POST['difficulty'];
+	$_SESSION['pseudo'] = $_POST['pseudo'];
+
+	var_dump($_SESSION);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +35,7 @@
 			$DATA['pseudo'] = $_POST['pseudo'];
 
 			$DATA['questions'] = new questions($DATA['difficulty']);
+			$_POST['difficulty'] = $DATA['difficulty'];
 
 		?>
 

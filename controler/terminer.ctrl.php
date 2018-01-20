@@ -1,3 +1,5 @@
+<? session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +53,31 @@
 
 					echo "Temps : " . $temps . "<br/>";
 
+					var_dump($_SESSION);
+
+
+					function ajouterScoreClassement($temps, $difficulty){
+
+						switch ($difficulty) {
+							case 'EASY':
+								# code...
+								break;
+
+							case 'MEDIUM':
+								# code...
+								break;
+
+							case 'HARD':
+								# code...
+								break;
+							
+							default:
+								die("Difficulté inconnue - impossible d'ajouter le score");
+								break;
+						}
+
+
+					}
 
 
 					// Calcul des points
