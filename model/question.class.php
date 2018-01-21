@@ -28,7 +28,7 @@
 		// Charge les reponses depuis la bd selon l'$id de la question
 		function loadReponses($id){
 
-			$dao = new DAO();
+			$dao = new DAO(0);
 			$db = $dao->db();
 
 			$cmd = "Select * from reponses_questions_simples where id=$id";

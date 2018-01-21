@@ -18,8 +18,9 @@
 
 
 
-
 				<?php
+
+					require_once("../model/DAO.class.php");
 
 					$nbReponsesCorrectes = calculerPoints(); // Nombres de reponses correctes (sachant que pas de reponse = 0)
 					$penalites = (10 - $nbReponsesCorrectes) *15; // penalités = nbMauvaiseReponses *
@@ -30,7 +31,7 @@
 
 					$sec = $sec + $penalites;
 
-					// Si les secondes sont > à 60, on rajoute 1 min et on suppr 60s
+					// Si les secondes sont >= à 60, on rajoute 1 min et on suppr 60s
 					while ($sec >= 60){
 						$min++;
 						$sec = $sec - 60;
@@ -54,22 +55,22 @@
 
 					echo "Temps : " . $temps . "<br/>";
 
-					var_dump($_SESSION);
+					ajouterScoreClassement("TEST", $temps, "EASY");
 
 
-					function ajouterScoreClassement($temps, $difficulty){
+					function ajouterScoreClassement($pseudo, $temps, $difficulty){
 
 						switch ($difficulty) {
 							case 'EASY':
-								# code...
+								$cmd = "INSERT INTO classement_questions_simples(pseudo, temps) VALUES (\"$pseudo\", \"$temps\")";
 								break;
 
 							case 'MEDIUM':
-								# code...
+								$cmd = "INSERT INTO classement_questions_moyennes(pseudo, temps) VALUES (\"$pseudo\", \"$temps\")";
 								break;
 
 							case 'HARD':
-								# code...
+								$cmd = "INSERT INTO classement_questions_difficiles(pseudo, temps) VALUES (\"$pseudo\", \"$temps\")";
 								break;
 							
 							default:
@@ -77,6 +78,18 @@
 								break;
 						}
 
+						// INSERTION SCORE
+						echo $cmd;
+						$dao = new DAO(1);
+						$db = $dao->db();
+
+						$res = $db->query($cmd);
+
+						if ($res) {
+							echo "insertion OK";
+						} else {
+							echo "Insertion failed";
+						}
 
 					}
 

@@ -17,7 +17,7 @@
 
 		function loadQuestions($difficulty){
 
-			$dao = new DAO();
+			$dao = new DAO(0);
 			$db = $dao->db();
 
 			switch ($difficulty) {

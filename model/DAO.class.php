@@ -7,14 +7,28 @@
          private $db; // L'objet de la base de donnée
 
          // Ouverture de la base de donnée
-         function __construct() {
-           
-           try{
-              $this->db = new PDO('mysql:host=localhost;dbname=league_of_quizz;charset=utf8', 'root', '');
+         function __construct($i) {
+
+            $host = "localhost";
+            $dbname = "league_of_quizz";
+
+            if ($i == 0){
+                $username = "selectUser";
+                $psw = "select";
+
+            } else if ($i == 1){
+                $username = "insertUser";
+                $psw = "insert";              
+            }
+
+            try{
+              $this->db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", "$username", "$psw");
             } catch (Exception $e){
-                    die('Erreur : ' . $e->getMessage());
+                        die('Erreur : ' . $e->getMessage());
             }
          }
+
+         
 
          function db(){
            return $this->db;
