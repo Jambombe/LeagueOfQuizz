@@ -18,6 +18,7 @@
 
 
 
+
 				<?php
 
 					$nbReponsesCorrectes = calculerPoints(); // Nombres de reponses correctes (sachant que pas de reponse = 0)
