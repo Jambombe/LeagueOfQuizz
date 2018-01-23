@@ -23,11 +23,11 @@
 					<input type="radio" name="difficulty" id="EASY" value="EASY" checked="checked">
 					<label for="EASY" class="difficulty">Facile</label>
 
-					<input type="radio" name="difficulty" id="MEDIUM" value="MEDIUM">
-					<label for="MEDIUM" class="difficulty">Moyen</label>
+					<input type="radio" name="difficulty" id="MEDIUM" value="MEDIUM" DISABLED>
+					<label for="MEDIUM" class="difficulty" title="Pas encore disponible">Moyen</label>
 
-					<input type="radio" name="difficulty" id="HARD" value="HARD">
-					<label for="HARD" class="difficulty">Difficile</label>
+					<input type="radio" name="difficulty" id="HARD" value="HARD" DISABLED>
+					<label for="HARD" class="difficulty" title="Pas encore disponible">Difficile</label>
 				</div>
 				<input type="submit" name="play" id="valider" value="Jouer">
 
