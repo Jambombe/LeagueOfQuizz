@@ -1,10 +1,10 @@
 <?php
 
-	// session_start();
-	$_SESSION['difficulty'] = $_POST['difficulty'];
-	$_SESSION['pseudo'] = $_POST['pseudo'];
+	//session_start();
+	// $_SESSION['difficulty'] = $_POST['difficulty'];
+	// $_SESSION['pseudo'] = $_POST['pseudo'];
 
-	var_dump($_SESSION);
+	// var_dump($_SESSION);
 
 ?>
 

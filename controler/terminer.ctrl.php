@@ -22,12 +22,17 @@
 
 					require_once("../model/DAO.class.php");
 
+					$pseudo = $_GET['pseudo'];
+					$difficulty = $_POST['difficulty'];
+
 					$nbReponsesCorrectes = calculerPoints(); // Nombres de reponses correctes (sachant que pas de reponse = 0)
 					$penalites = (10 - $nbReponsesCorrectes) *15; // penalités = nbMauvaiseReponses *
 
 					$min = intval(substr($_POST['time'], 0, 2));
 					$sec = intval(substr($_POST['time'], 3, 2));
 					$msec = intval(substr($_POST['time'], 6, 3));
+
+					echo "Temps : " . $min . ":" . $sec . ":" . $msec . "<br/><br/>";
 
 					$sec = $sec + $penalites;
 
@@ -51,11 +56,23 @@
 
 					echo "Nombre de réponses correctes : $nbReponsesCorrectes /10<br/>";
 					echo "Pénalités : " . $penalites . " secondes <br/>";
-					echo "Score : " . $nbReponsesCorrectes*100 . "<br/>";
+					// echo "Score : " . $nbReponsesCorrectes*100 . "<br/>";
+					echo "<strong>Temps Final : $temps</strong>";
 
-					echo "Temps : " . $temps . "<br/>";
+					echo "<br/> <br/> <hr>";
 
-					ajouterScoreClassement("TEST", $temps, "EASY");
+					ajouterScoreClassement($pseudo, $temps, $difficulty);
+
+					echo " <br />";
+
+					include_once("../view/afficher_scoreboard.view.php");
+
+					echo "<br/> <hr><br/>";
+
+					echo "<div class=\"center\">";
+					echo "<a href=\"index.php\">Rejouer</a>";
+					echo "</div>";
+
 
 
 					function ajouterScoreClassement($pseudo, $temps, $difficulty){
@@ -79,17 +96,17 @@
 						}
 
 						// INSERTION SCORE
-						echo $cmd;
+						// echo $cmd . "<br />";
 						$dao = new DAO(1);
 						$db = $dao->db();
 
 						$res = $db->query($cmd);
 
-						if ($res) {
-							echo "insertion OK";
-						} else {
-							echo "Insertion failed";
-						}
+						// if ($res) {
+						// 	echo "insertion OK";
+						// } else {
+						// 	echo "Insertion failed";
+						// }
 
 					}
 

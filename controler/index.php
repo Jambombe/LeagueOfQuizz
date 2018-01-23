@@ -18,7 +18,7 @@
 			<form action="jeu.php" method="post">
 				
 				<div class="center">
-					<textarea name="pseudo" placeholder="Pseudonyme" minlength="3" maxlength="20" rows="1" wrap="off" required></textarea>
+					<input id="pseudo" type="text" name="pseudo" placeholder="Pseudonyme" minlength="3" maxlength="20" rows="1" wrap="off" required>
 
 					<input type="radio" name="difficulty" id="EASY" value="EASY" checked="checked">
 					<label for="EASY" class="difficulty">Facile</label>

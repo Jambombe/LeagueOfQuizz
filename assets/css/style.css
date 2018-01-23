@@ -1,5 +1,10 @@
+/*@font-face{
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light.ttf') format('ttf');
+}
+*/
 html{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', arial, sans-serif;
 }
 
 body{
@@ -90,19 +95,42 @@ div.question{
 
 /* Liens */
 
-/*a:link{
+a:link{
 	text-decoration: none;
 	margin: 5px;
 	color: #1B15BE;
+
+
+	margin-left: 0px;
+	border: none;
+	color: white;
+	font-weight: bold;
+	margin: auto;
+
+	text-decoration: none;
+    width: 200px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    transition: all .2s;
+    color: #fff;
+    font-family: 'roboto';
+    font-weight: 400;
+    background-color: #217db4;
+    padding: 20px 0;
+    border-radius: 3px;
+    border: none;
+    font-size: 22px;
 }
 
 a:visited{
-	color: #1B15BE;
+	color: #fff;
 }
 
 a:hover{
-	color: #4B5DBE;
-}*/
+	color: #fff;
+	box-shadow: 0px 0px 5px black;
+}
 
 /* Label */
 
@@ -112,7 +140,8 @@ input[type=text]{
 	padding-left: 5px;
 }
 
-div.start form textarea{
+/* Textarea pseudo*/
+div.start form input#pseudo{
 	resize: none;
 	font-family: 'roboto';
     padding: 12px 3px;
@@ -227,6 +256,59 @@ table{
 	margin: auto;
 	/*color: #585858;*/
 }
+
+/* Scoreboard */
+
+table.scoreboard{
+	font-family: 'roboto';
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #585858;
+	border-collapse: collapse;
+	border-radius: 13px;
+}
+
+table.scoreboard th{
+	font-family: 'roboto';
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+	width: 30%;
+	border-radius: 3px;
+}
+
+table.scoreboard td{
+	font-family: 'roboto';
+	padding: 5px;
+	margin: auto;
+	border-color: #686868;
+}
+
+table.scoreboard tr#p1{
+	color: #E8B70C;
+}
+
+table.scoreboard tr#p2{
+	color: #C0C0C0;
+}
+
+table.scoreboard tr#p3{
+	color: #A75B10;
+}
+
+table.scoreboard th#col1{
+	width: 20%;
+}
+
+table.scoreboard th#col2{
+	width: 30%;
+}
+
+table.scoreboard th#col3{
+	width: 20%;
+}
+
+
 
 /*table td a{
 	width: 150px;

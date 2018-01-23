@@ -4,6 +4,8 @@
 
 	$questions = $DATA['questions']->questions();
 
+	$difficulty = $DATA["difficulty"];
+
 	echo "<div class=\"center\">";
 
 		echo "<form action=\"../controler/terminer.ctrl.php?pseudo={$DATA['pseudo']}\" method=\"POST\">";
@@ -12,8 +14,11 @@
 				afficherQuestion($i);
 			}
 
-			// Champs utilisé pour recuperer le temps
+			// Champ utilisé pour recuperer le temps
 			echo "<input type=\"radio\" name=\"time\" id=\"time\" value=\"e\" checked=\"checked\">";
+
+			// Champ utilisé pour recuperer la difficulté
+			echo "<input type=\"radio\" name=\"difficulty\" id=\"time\" value=\"$difficulty\" checked=\"checked\">";
 
 			echo "<input type=\"submit\" name=\"end\" id=\"valider\" value=\"Terminer\" onclick=\"stopChrono\">";
 
