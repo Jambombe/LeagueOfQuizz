@@ -11,12 +11,12 @@
 		private $_reponses; // Array contenant toutes les reponses proposées pour la question
 
 
-		function __construct($id, $ennonce, $urlImage){ // $id sert à charger les reponses de la question n° $id
+		function __construct($id, $ennonce, $urlImage, $difficulty){ // $id sert à charger les reponses de la question n° $id
 			$this->id = $id;
 			$this->_ennonce = $ennonce;
 			$this->_urlImage = $urlImage;
 
-			$this->_reponses = $this->loadReponses($id);
+			$this->_reponses = $this->loadReponses($id, $difficulty);
 		}
 
 		function id() { return $this->id; }
@@ -26,10 +26,29 @@
 
 
 		// Charge les reponses depuis la bd selon l'$id de la question
-		function loadReponses($id){
+		function loadReponses($id, $difficulty){
 
 			$dao = new DAO(0);
 			$db = $dao->db();
+
+			switch ($difficulty) {
+				case 'EASY':
+					$cmd = "Select * from reponses_questions_simples where id=$id";
+					break;
+				
+				case 'MEDIUM':
+					$cmd = "Select * from reponses_questions_moyennes where id=$id";
+					break;				
+
+				case 'HARD':
+					$cmd = "Select * from reponses_questions_difficiles where id=$id";
+					break;
+				
+				default:
+					die("Difficulté inconnue - Impossible de charger les réponses");
+					break;
+			}
+
 
 			$cmd = "Select * from reponses_questions_simples where id=$id";
 

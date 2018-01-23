@@ -69,7 +69,7 @@
 				$res = $db->query($cmd);
 				$question = $res->fetchAll();
 
-				$tab[$nb] = new question($question[0][0], $question[0][1], $question[0][2]);
+				$tab[$nb] = new question($question[0][0], $question[0][1], $question[0][2], $difficulty);
 				$nb++;
 
 			}

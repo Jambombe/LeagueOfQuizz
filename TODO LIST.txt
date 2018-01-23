@@ -1,4 +1,0 @@
-- Modifier class reponse pour qu'elle accepte le paramètre $difficulty (dans le but de faire un
-  switch($difficulty) pour savoir dans quelle relation aller chercher les réponses)
-
-- Régler problème double insertion
