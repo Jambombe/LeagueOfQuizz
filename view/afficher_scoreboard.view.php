@@ -38,7 +38,8 @@
 	echo "<div class=\"center\">";
 
 		echo "<table class=\"scoreboard\">";
-			echo "<tr><th id=\"col1\"></th><th id=\"col2\">$title</th><th id=\"col3\"></th></tr>";
+			/*echo "<tr><th id=\"col1\"></th><th id=\"col2\">$title</th><th id=\"col3\"></th></tr>";*/
+			echo "<caption>$title</caption>";
 
 			foreach ($scores as $score) {
 				echo "<tr id=\"p$place\">";
