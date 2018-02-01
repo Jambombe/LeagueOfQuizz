@@ -82,9 +82,10 @@ div#chrono{
 div.fixed-top{
 	position: fixed;
 	top: 30px;
+	left:-100px;
 	margin: auto;
 	display: block;
-	padding: 20px;
+	padding: 10px;
 }
 
 div.question{

@@ -5,21 +5,21 @@
 -- FACILE
 ---------------------------------------------------------------------------------
 
-CREATE TABLE `league_of_quizz`.`questions_simples` (
+CREATE TABLE questions_simples (
 	id SMALLINT NOT NULL AUTO_INCREMENT ,
 	ennonce TEXT NOT NULL ,
 	image TEXT NOT NULL ,
 	PRIMARY KEY (id))
 ENGINE = InnoDB;
 
-CREATE TABLE `league_of_quizz`.`reponses_questions_simples` (
+CREATE TABLE reponses_questions_simples (
 	id SMALLINT NOT NULL,
 	proposition TEXT NOT NULL ,
 	correct BIT NOT NULL ,
 	FOREIGN KEY (id) REFERENCES questions_simples(id))
 ENGINE = InnoDB;
 
-CREATE TABLE `league_of_quizz`.`classement_questions_simples` (
+CREATE TABLE classement_questions_simples (
 	id SMALLINT NOT NULL AUTO_INCREMENT ,
 	pseudo TEXT NOT NULL ,
 	temps TEXT NOT NULL ,
@@ -30,21 +30,21 @@ ENGINE = InnoDB;
 -- MEDIUM
 ---------------------------------------------------------------------------------
 
-CREATE TABLE `league_of_quizz`.`questions_moyennes` (
+CREATE TABLE questions_moyennes (
 	id SMALLINT NOT NULL AUTO_INCREMENT ,
 	ennonce TEXT NOT NULL ,
 	image TEXT NOT NULL ,
 	PRIMARY KEY (id))
 ENGINE = InnoDB;
 
-CREATE TABLE `league_of_quizz`.`reponses_questions_moyennes` (
+CREATE TABLE reponses_questions_moyennes (
 	id SMALLINT NOT NULL,
 	proposition TEXT NOT NULL ,
 	correct BIT NOT NULL ,
 	FOREIGN KEY (id) REFERENCES questions_simples(id))
 ENGINE = InnoDB;
 
-CREATE TABLE `league_of_quizz`.`classement_questions_moyennes` (
+CREATE TABLE classement_questions_moyennes (
 	id SMALLINT NOT NULL AUTO_INCREMENT ,
 	pseudo TEXT NOT NULL ,
 	temps TEXT NOT NULL ,
@@ -55,21 +55,21 @@ ENGINE = InnoDB;
 -- HARD
 ---------------------------------------------------------------------------------
 
-CREATE TABLE `league_of_quizz`.`questions_difficiles` (
+CREATE TABLE questions_difficiles (
 	id SMALLINT NOT NULL AUTO_INCREMENT ,
 	ennonce TEXT NOT NULL ,
 	image TEXT NOT NULL ,
 	PRIMARY KEY (id))
 ENGINE = InnoDB;
 
-CREATE TABLE `league_of_quizz`.`reponses_questions_difficiles` (
+CREATE TABLE reponses_questions_difficiles (
 	id SMALLINT NOT NULL,
 	proposition TEXT NOT NULL ,
 	correct BIT NOT NULL ,
 	FOREIGN KEY (id) REFERENCES questions_simples(id))
 ENGINE = InnoDB;
 
-CREATE TABLE `league_of_quizz`.`classement_questions_difficiles` (
+CREATE TABLE classement_questions_difficiles (
 	id SMALLINT NOT NULL AUTO_INCREMENT ,
 	pseudo TEXT NOT NULL ,
 	temps TEXT NOT NULL ,

@@ -55,15 +55,13 @@
 						$temps = $min . ":" . $sec . ":" . $msec;
 
 						echo "Nombre de réponses correctes : $nbReponsesCorrectes /10<br/>";
-						echo "Pénalités : " . $penalites . " secondes <br/>";
-						// echo "Score : " . $nbReponsesCorrectes*100 . "<br/>";
-						echo "<strong>Temps Final : $temps</strong>";
+						echo "Pénalités : " . $penalites . " secondes <br/><br/>";
+						echo "Temps final : " . $temps;
 
 						echo "<br/> <br/> <hr>";
 
 						// Si le score n'est pas présent dans la table, on l'ajoute
 						if (! isInTable($pseudo, $temps, $difficulty)){
-
 							ajouterScoreClassement($pseudo, $temps, $difficulty);
 						}
 
