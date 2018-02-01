@@ -1,6 +1,4 @@
 ﻿[+] Mélanger propostitions de réponses
 [+] Afficher correction à la fin du quizz
-[+] Paragraphe régles, comment jouer
 [+] Questions à 2 propositions
 [+] Afficher toutes les questions / réponses (pour moi)
- -  Empêcher de recharger la page des sore pour éviter d'ajouter plusieurs fois le même
