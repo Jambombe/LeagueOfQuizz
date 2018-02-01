@@ -40,7 +40,6 @@
 		?>
 
 		<div class="fixed-top">
-
 			<div class="center">
 
 				<script type="text/javascript" src="../assets/js/chrono.js"></script>

@@ -64,6 +64,9 @@
 				
 			}
 
+			// ERREUR : Le chrono ne se lance pas ..?
+			// shuffle($tab);
+
 			return $tab;
 
 		}

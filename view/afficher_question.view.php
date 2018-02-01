@@ -4,6 +4,10 @@
 
 	$questions = $DATA['questions']->questions();
 
+	// foreach ($questions as $q) {
+	// 	var_dump($q);
+	// }
+
 	$difficulty = $DATA["difficulty"];
 
 	echo "<div class=\"center\">";

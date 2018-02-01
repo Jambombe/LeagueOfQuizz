@@ -68,6 +68,7 @@ nav li a:hover{
 div.center{
 	margin: auto;
 	text-align: center;
+	color: gray;
 }
 
 div#chrono{

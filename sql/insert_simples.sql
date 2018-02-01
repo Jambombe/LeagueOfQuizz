@@ -41,10 +41,10 @@ insert into reponses_questions_simples values (7, "7", 1);
 insert into reponses_questions_simples values (7, "8", 0);
 
 insert into questions_simples(id, ennonce, image) values (8, "Combien de joueurs s\'opposent sur la Forêt Torturée ?", "forest.jpg");
-insert into reponses_questions_simples values (8, "3", 1);
+insert into reponses_questions_simples values (8, "3", 0);
 insert into reponses_questions_simples values (8, "4", 0);
 insert into reponses_questions_simples values (8, "5", 0);
-insert into reponses_questions_simples values (8, "6", 0);
+insert into reponses_questions_simples values (8, "6", 1);
 
 insert into questions_simples(id, ennonce, image) values (9, "La partie de termine ...", "victory.png");
 insert into reponses_questions_simples values (9, "Après une heure de jeu", 0);
