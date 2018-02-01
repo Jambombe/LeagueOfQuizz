@@ -36,6 +36,22 @@
 
 		</div>
 
+
+		<div class="center rules">
+
+			<br/><br/>
+			
+			<p><u>Objectif :</u> Répondre correctement aux 10 questions en un minimum de temps</p>
+
+			<ul>
+				<li>10 questions tirées aléatoirement en fonction de la difficulté sélectionnée</li>
+				<li>1 question non répondue ou avec une réponse incorrecte entraine une pénalité de 15 secondes</li>
+				<li>Seuls les 10 meilleurs scores de chaque difficulté sont sauvegardés</li>
+			</ul>
+
+
+		</div>
+
 	</div>
 
 

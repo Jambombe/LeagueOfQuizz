@@ -106,7 +106,7 @@ insert into reponses_questions_simples values (18, "2.25", 0);
 insert into reponses_questions_simples values (18, "2.50", 1);
 insert into reponses_questions_simples values (18, "3", 0);
 
-insert into questions_simples(id, ennonce, image) values (19, "Quelle est la limite de réduction des délais de récupération (hors runes) ?", "stats.png");
+insert into questions_simples(id, ennonce, image) values (19, "Quelle est la limite de réduction des délais de récupération (hors runes) ?", "stats.jpg");
 insert into reponses_questions_simples values (19, "35%", 0);
 insert into reponses_questions_simples values (19, "40%", 1);
 insert into reponses_questions_simples values (19, "45%", 0);

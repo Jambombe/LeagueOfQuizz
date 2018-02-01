@@ -1,0 +1,5 @@
+$host = "185.224.137.203";
+
+$dbname = "u291663786_j2p";
+
+mysql -u u291663786_j2p -p -h sql153.main-hosting.eu
