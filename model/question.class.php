@@ -50,8 +50,6 @@
 			}
 
 
-			$cmd = "Select * from reponses_questions_simples where id=$id";
-
 			$res = $db->query($cmd);
 			$rep = $res->fetchAll();
 

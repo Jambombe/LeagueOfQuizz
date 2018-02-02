@@ -110,7 +110,6 @@
 
 
 					function ajouterScoreClassement($pseudo, $temps, $difficulty){
-
 						switch ($difficulty) {
 							case 'EASY':
 								$cmd = "INSERT INTO classement_questions_simples(pseudo, temps) VALUES (\"$pseudo\", \"$temps\")";

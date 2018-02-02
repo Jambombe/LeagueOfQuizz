@@ -14,12 +14,12 @@
 
 		case 'MEDIUM':
 			$title = "Difficulté MOYENNE";
-			$cmd = "Select pseudo, temps From classement_questions_simples ORDER BY temps LIMIT 10";
+			$cmd = "Select pseudo, temps From classement_questions_moyennes ORDER BY temps LIMIT 10";
 			break;
 
 		case 'HARD':
 			$title = "Difficulté DIFFICILE";
-			$cmd = "Select pseudo, temps From classement_questions_simples ORDER BY temps LIMIT 10";
+			$cmd = "Select pseudo, temps From classement_questions_difficiles ORDER BY temps LIMIT 10";
 			break;
 		
 		default:
